@@ -46,20 +46,8 @@
     display: flex;
     justify-content: space-around;
 }
-.grafiti{
-    /* margin-left:20%; */
-    margin-top: 100px;
-    width: 400px;
-    max-height: 500px;
-}
-.grafiti2{
-    /* margin-left: 25%; */
-    width: 400px;
-    max-height: 500px;
-}
+
 .section{
-    /* background-image: url(../assets/img/fondo.jpg); */
-    /* background-repeat: repeat; */
     background-color: rgb(98, 236, 225);
     height: auto;
     padding: 10px;

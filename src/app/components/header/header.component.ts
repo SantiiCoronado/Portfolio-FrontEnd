@@ -6,13 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  links = [
-    'Sobre Mi',
-    'Estudios', 
-    'Hard & Soft Skills',
-    'Proyectos',
-    'Contacto'
-  ]
 
   constructor() { }
 

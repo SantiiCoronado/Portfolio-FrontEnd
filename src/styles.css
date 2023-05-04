@@ -1,1 +1,125 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav{
+    background-color: rgb(83, 202, 192);
+    padding: 15px;
+    display: flex;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-right: 55%;
+}
+.nav-button{
+    background-color: rgba(0, 0, 0, 0.466);
+    color: white;
+    padding: 5px 10px;
+    margin: 2px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 20px;
+}
+.login-button{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 5px 5px;
+    margin: 2px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 20px;
+}
+.banner{
+    background-image: url(./assets/img/banner2.jpg);
+    background-position-y: 41%;
+}
+.foto{
+    margin-top: 400px;
+    margin-left: 45%;
+    border-radius: 150px;
+}
+.article{
+    display: flex;
+    justify-content: space-around;
+}
+.grafiti{
+    /* margin-left:20%; */
+    margin-top: 100px;
+    width: 400px;
+    max-height: 500px;
+}
+.grafiti2{
+    /* margin-left: 25%; */
+    width: 400px;
+    max-height: 500px;
+}
+.section{
+    /* background-image: url(../assets/img/fondo.jpg); */
+    /* background-repeat: repeat; */
+    background-color: rgb(98, 236, 225);
+    height: auto;
+    padding: 10px;
+}
+.sobre_mi{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin:7% 0px 10px 0%;
+    padding: 20px; 
+    width: 450px;
+    height: auto;
+    font-size: 20px;
+}
+.estudios{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin:50px 0px 10px 0%;
+    padding: 20px; 
+    width: 450px;
+    height: auto;
+    font-size: 20px;
+}
+.skills{
+    display: block;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin:50px 0px 10px 8%;
+    padding: 20px; 
+    width: 450px;
+    height: auto;
+}
+.barra{
+    height: 50px;
+    width: 200px;
+}
+.proyectos{
+    display: block;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin:50px 0px 0px 0px ;
+    padding: 20px; 
+    width: auto;
+    height: auto;
+}
+.titulo-proy{
+    font-size: 40px;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+}
+.contenido-proy{
+    margin-top: 100px;
+    margin-left: 7%;
+    margin-right: 7%;
+    display: flex;
+}
+.descripcion-proy{
+    padding-left:50px ;
+}
+.footer{
+    padding: 10px 0px;
+    background-color: rgb(87, 209, 199);
+    text-align: center;
+}

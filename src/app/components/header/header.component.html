@@ -1,0 +1,15 @@
+<header>
+    <div class="banner">
+        <img src="../assets/img/foto.jpg" alt="foto de perfil" width="200px" height="200px" class="foto">
+    </div>
+<nav class="nav">
+    <div class="links">
+        <div *ngFor="let link of links">
+            <a routerLink="" class="nav-button"> {{link}} </a>
+        </div>
+    </div>
+    <div>
+        <a routerLink="login" class="login-button">Ingresar</a>
+    </div>
+</nav>
+</header>

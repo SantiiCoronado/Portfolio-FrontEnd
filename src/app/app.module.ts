@@ -12,6 +12,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ExperienciaLaboralComponent } from './components/experiencia-laboral/experiencia-laboral.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ExperienciaLaboralComponent } from './components/experiencia-laboral/ex
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

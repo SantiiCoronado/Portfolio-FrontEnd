@@ -2,28 +2,15 @@
     <div class="titulo-proy">
         <h2>Proyectos</h2>
     </div>
-    <ul>
+    <ul *ngFor="let proyecto of proyectos">
         <li>
             <div class="contenido-proy">
                 <div class="imagen-proy">
-                <img src="https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen.jpg" alt="" width="600px" height="350px">
-                </div>
-                
+                <img src={{proyecto.urlFoto}} alt="foto del proyecto" width="600px" height="350px">
+                </div> 
                 <div class="descripcion-proy">
-                    <h2>Titulo de Proyecto</h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio obcaecati autem reprehenderit alias sed veniam dolore sapiente aliquam, totam quasi, quibusdam nam natus voluptates doloribus accusamus necessitatibus nisi possimus? Recusandae!
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="contenido-proy">
-                <div class="imagen-proy">
-                <img src="https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen.jpg" alt="" width="600px" height="350px">
-                </div>
-                
-                <div class="descripcion-proy">
-                    <h2>Titulo de Proyecto</h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio obcaecati autem reprehenderit alias sed veniam dolore sapiente aliquam, totam quasi, quibusdam nam natus voluptates doloribus accusamus necessitatibus nisi possimus? Recusandae!
+                    <h2>{{proyecto.nombre}}</h2>
+                    {{proyecto.descripcion}}
                 </div>
             </div>
         </li>

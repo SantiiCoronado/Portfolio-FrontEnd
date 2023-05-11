@@ -3,15 +3,11 @@
         <div class="titulo">
             <h2>Estudios</h2>
         </div>
-            <ul>
+            <ul *ngFor="let estudio of estudios">
                 <li>
-                    <div class="institucion">Institucion 1</div>
-                    <div class="carrera">Carrera</div>
-                    <div> fecha inicio - fecha final</div>
-                </li>
-                <li>
-                    Institucion 2
-
+                    <div class="institucion">-{{estudio.institucion}}</div>
+                    <div class="carrera">{{estudio.titulo}}</div>
+                    <div class="fechas"> {{estudio.fechaInicio}} - {{(estudio.fechaFin == null) ? "Actualmente": estudio.fechaFin}}</div>
                 </li>
             </ul>
         </div>

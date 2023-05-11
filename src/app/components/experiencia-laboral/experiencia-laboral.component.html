@@ -3,16 +3,11 @@
         <div class="titulo">
             <h2>Experiencia Laboral</h2>
         </div>
-        <ul>
+        <ul *ngFor="let experiencia of experiencias">
             <li>
-                <div class="titulo">Experiencia 1</div>
-                <div class="descripcion">Descripcion</div>
-                <div class="Lugar"> Lugar</div>
-                <div> fecha inicio - fecha final</div>
-            </li>
-            <li>
-                Experiencia 2
-
+                <div class="empresa">{{experiencia.empresa}}</div>
+                <div class="descripcion">{{experiencia.descripcion}}</div>
+                <div> {{experiencia.fechaInicio}} - {{(experiencia.fechaFin == null) ? "Actualmente" : experiencia.fechaFin}}</div>
             </li>
         </ul>
         </div>

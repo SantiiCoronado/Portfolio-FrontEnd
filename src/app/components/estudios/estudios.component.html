@@ -3,12 +3,17 @@
         <div class="titulo">
             <h2>Estudios</h2>
         </div>
+        <button class="btn btn-success" routerLink="/estudioscrear">+</button>
+        <div>
             <ul *ngFor="let estudio of estudios">
                 <li>
                     <div class="institucion">-{{estudio.institucion}}</div>
                     <div class="carrera">{{estudio.titulo}}</div>
                     <div class="fechas"> {{estudio.fechaInicio}} - {{(estudio.fechaFin == null) ? "Actualmente": estudio.fechaFin}}</div>
+                    <button class="btn btn-secondary" routerLink="/estudioseditar/{{estudio.id}}">Editar</button>
+                    <button class="btn btn-danger" (click)="delete(estudio.id)">Eliminar</button>
                 </li>
             </ul>
         </div>
+    </div>
 </article>

@@ -1,0 +1,15 @@
+<div class="login">
+    <div class="login-form">
+        <form (ngSubmit)="onUpdate()" #f="ngForm">
+            <label for="institucion" class="form-label">Institucion</label>
+            <input type="text" class="form-control" id="institucion" name="institucion" [(ngModel)]="estudio.institucion" required>
+            <label for="titulo" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="estudio.titulo" required>
+            <label for="fechaInicio" class="form-label">Fecha Inicio</label>
+            <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" [(ngModel)]="estudio.fechaInicio" required>
+            <label for="fechaFin" class="form-label">Fecha Fin</label>
+            <input type="date" class="form-control" id="fechaFin" name="fechaFin" [(ngModel)]="estudio.fechaFin">
+            <button class="btn btn-primary" type="submit">Actualizar</button>
+        </form>
+    </div>
+</div>

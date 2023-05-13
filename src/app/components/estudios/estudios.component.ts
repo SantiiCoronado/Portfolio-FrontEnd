@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Estudio } from 'src/app/models/estudio';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -7,16 +9,30 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit {
-  estudios:any
+  estudios:Estudio[]=[];
 
   constructor(private portfolioService:PortfolioService) { }
 
   ngOnInit(): void {
+    this.cargarPersona();
+  }
+
+  cargarPersona():void{
     this.portfolioService.obtenerDatosEstudio().subscribe(data=>{
-      console.log("Datos de estudio"+ JSON.stringify(data));
       this.estudios=data;
     }
     );
+  }
+
+  delete(id?:number):void{
+    if(id != undefined){
+      this.portfolioService.eliminarEstudio(id).subscribe(data=>{
+        
+      }, err =>{
+        this.cargarPersona();
+        alert("Estudio eliminado correctamente")
+      })
+    }
   }
 
 }

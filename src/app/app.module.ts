@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EstudioscrearComponent } from './components/estudios/estudioscrear.component';
 import { EstudioseditarComponent } from './components/estudios/estudioseditar.component';
+import { SobreMieditarComponent } from './components/sobre-mi/sobre-mieditar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EstudioseditarComponent } from './components/estudios/estudioseditar.co
     PortfolioComponent,
     ExperienciaLaboralComponent,
     EstudioscrearComponent,
-    EstudioseditarComponent
+    EstudioseditarComponent,
+    SobreMieditarComponent
   ],
   imports: [
     BrowserModule,

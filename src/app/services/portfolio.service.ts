@@ -19,8 +19,8 @@ export class PortfolioService {
     return this.http.get<Persona[]>(this.url + "persona");
   }
 
-  editarPersona(id:number, persona:Persona):Observable<any>{
-    return this.http.put<Persona>(this.url + `persona/editar/${id}`, persona)
+  editarPersona(persona:Persona):Observable<any>{
+    return this.http.put<Persona>(this.url + `persona/editar`, persona)
   }
 
 

@@ -32,6 +32,12 @@
     font-size: 20px;
     margin-top: 10px;
     margin-left: 40%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 20px;
 }
 
 .nav{
@@ -54,14 +60,7 @@
     border-radius: 3px;
     font-size: 20px;
 }
-.login-button{
-    color: white;
-    background-color: rgba(0, 0, 0, 0.466);
-    padding: 5px 10px;
-    text-decoration: none;
-    border-radius: 3px;
-    font-size: 20px;
-}
+
 .banner{
     background-image: url(./assets/img/banner.jpg);
     background-position-y: 41%;
@@ -140,4 +139,7 @@
     padding: 10px 0px;
     background-color: rgb(155, 92, 102);
     text-align: center;
+}
+.btn{
+    margin: 0px 10px 0px 0px;
 }

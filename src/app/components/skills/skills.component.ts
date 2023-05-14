@@ -11,11 +11,22 @@ export class SkillsComponent implements OnInit {
   constructor(private portfolioService:PortfolioService) { }
 
   ngOnInit(): void {
+    this.cargarSkills();
+  }
+
+  cargarSkills():void{
     this.portfolioService.obtenerDatosSkill().subscribe(data=>{
-      console.log("Datos de skill"+ JSON.stringify(data));
       this.skills=data;
+    });
+  }
+
+  delete(id:number):void{
+    if(id != undefined){
+      this.portfolioService.eliminarSkill(id).subscribe(data=>{
+      }, err=>{
+        this.cargarSkills();
+      })
     }
-    );
   }
 
 }

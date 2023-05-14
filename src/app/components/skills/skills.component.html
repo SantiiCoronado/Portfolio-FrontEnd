@@ -5,13 +5,11 @@
                 Hard & Soft Skills
             </h2>
         </div>
+        <button class="btn btn-success" routerLink="/skillscrear">+</button>
         <ul *ngFor="let skill of skills">
-            <li>
-                <div class="contenido">
-                    <div class="descripcion-skills">
-                        {{skill.skill}}
-                    </div>
-                </div>
+            <li class="descripcion-skills">
+                - {{skill.skill}}
+                <button class="btn btn-danger" (click)="delete(skill.id)">Eliminar</button>
             </li>
         </ul>
         

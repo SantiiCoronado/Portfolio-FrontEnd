@@ -22,7 +22,6 @@ export class SobreMieditarComponent implements OnInit {
 
   onUpdate(): void{
     this.portfolioService.editarPersona(this.persona).subscribe(data=>{
-      alert("Modificacion realizada correctamente");
       this.router.navigate(['']);
     }, err =>{
       alert("Error al modificar")

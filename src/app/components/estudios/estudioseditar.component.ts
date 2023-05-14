@@ -16,7 +16,6 @@ export class EstudioseditarComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     this.portfolioService.obtenerEstudio(id).subscribe(data=>{
-      console.log("Datos de estudio"+ JSON.stringify(data));
       this.estudio=data;
     }
     );
@@ -25,7 +24,6 @@ export class EstudioseditarComponent implements OnInit {
   onUpdate(): void{
     const id = this.activatedRoute.snapshot.params['id'];
     this.portfolioService.editarEstudio(id, this.estudio).subscribe(data=>{
-      alert("Modificacion realizada correctamente");
       this.route.navigate(['']);
     }, err =>{
       alert("Error al modificar el estudio")

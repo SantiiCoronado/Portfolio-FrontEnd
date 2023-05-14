@@ -23,7 +23,6 @@ export class EstudioscrearComponent implements OnInit {
     const estudio = new Estudio(this.institucion, this.titulo, this.fechaInicio, this.fechaFin);
     this.portfolioService.crearEstudio(estudio).subscribe(data=>{
     }, err=>{
-      alert("Estudio añadido correctamente");
       this.router.navigate(['']);
     })
   }

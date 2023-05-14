@@ -3,11 +3,14 @@
         <div class="titulo">
             <h2>Experiencia Laboral</h2>
         </div>
+        <button class="btn btn-success" routerLink="/experiencia-laboralcrear">+</button>
         <ul *ngFor="let experiencia of experiencias">
             <li>
                 <div class="empresa">{{experiencia.empresa}}</div>
                 <div class="descripcion">{{experiencia.descripcion}}</div>
-                <div> {{experiencia.fechaInicio}} - {{(experiencia.fechaFin == null) ? "Actualmente" : experiencia.fechaFin}}</div>
+                <div class="fechas"> {{experiencia.fechaInicio}} - {{(experiencia.fechaFin == null) ? "Actualmente" : experiencia.fechaFin}}</div>
+                <button class="btn btn-secondary" routerLink="/experiencia-laboraleditar/{{experiencia.id}}">Editar</button>
+                <button class="btn btn-danger" (click)="delete(experiencia.id)">Eliminar</button>
             </li>
         </ul>
         </div>

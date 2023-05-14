@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExperienciaLaboral } from 'src/app/models/experiencia-laboral';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -7,16 +8,28 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./experiencia-laboral.component.css']
 })
 export class ExperienciaLaboralComponent implements OnInit {
-  experiencias:any;
+  experiencias:ExperienciaLaboral[] = [];
 
   constructor(private portfolioService:PortfolioService) { }
 
   ngOnInit(): void {
+    this.cargarExperiencias();
+  }
+
+  cargarExperiencias():void{
     this.portfolioService.obtenerDatosExperiencia().subscribe(data=>{
-      console.log("Datos de experiencia"+ JSON.stringify(data));
-      this.experiencias=data;
+      this.experiencias = data;
+    })
+  }
+
+  delete(id?:number):void{
+    if(id != undefined){
+      this.portfolioService.eliminarExperiencia(id).subscribe(data=>{
+      }, err =>{
+        this.cargarExperiencias();
+      })
     }
-    );
+
   }
 
 }

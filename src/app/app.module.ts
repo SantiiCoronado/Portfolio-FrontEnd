@@ -17,6 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { EstudioscrearComponent } from './components/estudios/estudioscrear.component';
 import { EstudioseditarComponent } from './components/estudios/estudioseditar.component';
 import { SobreMieditarComponent } from './components/sobre-mi/sobre-mieditar.component';
+import { ExperienciaLaboralcrearComponent } from './components/experiencia-laboral/experiencia-laboralcrear.component';
+import { ExperienciaLaboraleditarComponent } from './components/experiencia-laboral/experiencia-laboraleditar.component';
+import { SkillscrearComponent } from './components/skills/skillscrear.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { SobreMieditarComponent } from './components/sobre-mi/sobre-mieditar.com
     ExperienciaLaboralComponent,
     EstudioscrearComponent,
     EstudioseditarComponent,
-    SobreMieditarComponent
+    SobreMieditarComponent,
+    ExperienciaLaboralcrearComponent,
+    ExperienciaLaboraleditarComponent,
+    SkillscrearComponent
   ],
   imports: [
     BrowserModule,

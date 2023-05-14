@@ -14,10 +14,10 @@ export class EstudiosComponent implements OnInit {
   constructor(private portfolioService:PortfolioService) { }
 
   ngOnInit(): void {
-    this.cargarPersona();
+    this.cargarEstudios();
   }
 
-  cargarPersona():void{
+  cargarEstudios():void{
     this.portfolioService.obtenerDatosEstudio().subscribe(data=>{
       this.estudios=data;
     }
@@ -27,10 +27,8 @@ export class EstudiosComponent implements OnInit {
   delete(id?:number):void{
     if(id != undefined){
       this.portfolioService.eliminarEstudio(id).subscribe(data=>{
-        
       }, err =>{
-        this.cargarPersona();
-        alert("Estudio eliminado correctamente")
+        this.cargarEstudios();
       })
     }
   }

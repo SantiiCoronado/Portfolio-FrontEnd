@@ -13,7 +13,6 @@ export class SobreMiComponent implements OnInit {
 
   ngOnInit(): void {
     this.portfolioService.obtenerDatosPersona().subscribe(data=>{
-        console.log("Datos personales"+ JSON.stringify(data));
         this.personas=data[0];
       }
     );

@@ -11,7 +11,7 @@ import { Skill } from '../models/skill';
   providedIn: 'root'
 })
 export class PortfolioService {
-  url:string="http://localhost:8080/api/";
+  url:string="https://portfolio-backend-6wd4.onrender.com/api/";
   
   constructor(private http:HttpClient) { }
 

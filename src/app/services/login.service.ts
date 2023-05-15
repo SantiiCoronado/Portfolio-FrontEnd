@@ -11,7 +11,7 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   login(creds:Credentials){
-    return this.http.post('http://localhost:8080/login', creds, {
+    return this.http.post('https://portfolio-backend-6wd4.onrender.com/login', creds, {
       observe: 'response'
     }).pipe(map((response:HttpResponse<any>)=>{
       const body = response.body;

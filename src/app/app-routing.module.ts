@@ -8,17 +8,22 @@ import { SobreMieditarComponent } from './components/sobre-mi/sobre-mieditar.com
 import { ExperienciaLaboralcrearComponent } from './components/experiencia-laboral/experiencia-laboralcrear.component';
 import { ExperienciaLaboraleditarComponent } from './components/experiencia-laboral/experiencia-laboraleditar.component';
 import { SkillscrearComponent } from './components/skills/skillscrear.component';
+import { ProyectoscrearComponent } from './components/proyectos/proyectoscrear.component';
+import { ProyectoseditarComponent } from './components/proyectos/proyectoseditar.component';
+import { AuthGuard } from './helpers/auth.guard';
 
 const routes: Routes = [
-  {path:'portfolio', component: PortfolioComponent},
-  {path:'estudioscrear', component: EstudioscrearComponent},
-  {path:'estudioseditar/:id', component: EstudioseditarComponent},
-  {path:'sobre-mieditar/:id', component: SobreMieditarComponent},
-  {path:'experiencia-laboralcrear', component: ExperienciaLaboralcrearComponent},
-  {path:'experiencia-laboraleditar/:id', component: ExperienciaLaboraleditarComponent},
-  {path:'skillscrear', component: SkillscrearComponent},
+  {path:'portfolio', component: PortfolioComponent, canActivate:[AuthGuard]},
+  {path:'estudioscrear', component: EstudioscrearComponent, canActivate:[AuthGuard]},
+  {path:'estudioseditar/:id', component: EstudioseditarComponent, canActivate:[AuthGuard]},
+  {path:'sobre-mieditar/:id', component: SobreMieditarComponent, canActivate:[AuthGuard]},
+  {path:'experiencia-laboralcrear', component: ExperienciaLaboralcrearComponent, canActivate:[AuthGuard]},
+  {path:'experiencia-laboraleditar/:id', component: ExperienciaLaboraleditarComponent, canActivate:[AuthGuard]},
+  {path:'skillscrear', component: SkillscrearComponent, canActivate:[AuthGuard]},
+  {path:'proyectoscrear', component: ProyectoscrearComponent, canActivate:[AuthGuard]},
+  {path:'proyectoseditar/:id', component: ProyectoseditarComponent, canActivate:[AuthGuard]},
   {path:'login', pathMatch: 'full', component: LoginComponent},
-  {path:'', redirectTo: 'portfolio', pathMatch: 'full'}
+  {path:'', pathMatch: 'full',component:PortfolioComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

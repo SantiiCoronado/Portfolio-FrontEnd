@@ -1,0 +1,16 @@
+<div class="login">
+    <div class="login-form">
+        <form (ngSubmit)="onUpdate()" #f="ngForm">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="proyecto.nombre" required>
+
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <textarea type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="proyecto.descripcion" required rows="5"></textarea>
+
+            <label for="urlFoto" class="form-label">URL de la Portada</label>
+            <input type="text" class="form-control" id="urlFoto" name="urlFoto" [(ngModel)]="proyecto.urlFoto" required>
+            <br>
+            <button class="btn btn-primary" type="submit">Editar</button>
+        </form>
+    </div>
+</div>

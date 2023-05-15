@@ -3,6 +3,7 @@
         <form (ngSubmit)="onCreate()" #f="ngForm">
             <label for="skill" class="form-label">Skill</label>
             <input type="text" class="form-control" id="skill" name="skill" [(ngModel)]="skill" required>
+            <br>
             <button class="btn btn-primary" type="submit">Crear</button>
         </form>
     </div>

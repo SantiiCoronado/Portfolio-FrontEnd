@@ -12,6 +12,10 @@ export class ProyectosComponent implements OnInit {
   proyectos:any;
 
   ngOnInit(): void {
+    this.cargarProyectos();
+  }
+
+  cargarProyectos():void{
     this.portfolioService.obtenerDatosProyecto().subscribe(data=>{
       console.log("Datos de proyecto"+ JSON.stringify(data));
       this.proyectos=data;
@@ -19,4 +23,12 @@ export class ProyectosComponent implements OnInit {
     );
   }
 
+  delete(id?:number){
+    if(id!=undefined){
+      this.portfolioService.eliminarProyecto(id).subscribe(data=>{       
+      }, err=>{
+        this.cargarProyectos();
+      })
+    }
+  }
 }

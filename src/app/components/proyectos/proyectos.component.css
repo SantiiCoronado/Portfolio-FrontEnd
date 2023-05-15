@@ -1,0 +1,9 @@
+.button{
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.button button{
+    margin-top: 10px;
+}

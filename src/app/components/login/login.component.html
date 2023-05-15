@@ -1,11 +1,11 @@
 <div class="login">
   <div class="login-form">
-    <form [formGroup]="form">
+    <form [formGroup]="Form" #f="ngForm" (ngSubmit)="login()">
       <div class="elemento-login">
         <label for="email" class="form-label">Email</label>
         <input type="email" formControlName="email"
           [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
-          class="form-control" id="email">
+          class="form-control" id="email" [(ngModel)]="creds.email">
         <div *ngIf="Email?.errors && Email?.touched">
           <p *ngIf="Email?.hasError('required')" class="text-danger">
             El email es requerido
@@ -19,7 +19,7 @@
         <label for="password" class="form-label">Contraseña</label>
         <input type="password" formControlName="password"
           [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
-          class="form-control" id="password">
+          class="form-control" id="password"  [(ngModel)]="creds.password">
         <div *ngIf="Password?.errors && Password?.touched">
           <p *ngIf="Password?.hasError('required')" class="text-danger">
             La contraseña es requerida

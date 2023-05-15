@@ -14,6 +14,11 @@ export class PortfolioService {
   url:string="http://localhost:8080/api/";
   
   constructor(private http:HttpClient) { }
+
+  getToken(){
+    return localStorage.getItem('token')
+  }
+  
   //Persona
   obtenerDatosPersona():Observable<Persona[]>{
     return this.http.get<Persona[]>(this.url + "persona");

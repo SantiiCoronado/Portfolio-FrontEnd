@@ -3,6 +3,7 @@
         <form (ngSubmit)="onUpdate()" #f="ngForm">
             <label for="sobreMi" class="form-label">Sobre Mi</label>
             <input type="text" class="form-control" id="sobreMi" name="sobreMi" [(ngModel)]="persona.sobreMi" required>
+            <br>
             <button class="btn btn-primary" type="submit">Actualizar</button>
         </form>
     </div>

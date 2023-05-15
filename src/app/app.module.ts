@@ -13,13 +13,16 @@ import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ExperienciaLaboralComponent } from './components/experiencia-laboral/experiencia-laboral.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { EstudioscrearComponent } from './components/estudios/estudioscrear.component';
 import { EstudioseditarComponent } from './components/estudios/estudioseditar.component';
 import { SobreMieditarComponent } from './components/sobre-mi/sobre-mieditar.component';
 import { ExperienciaLaboralcrearComponent } from './components/experiencia-laboral/experiencia-laboralcrear.component';
 import { ExperienciaLaboraleditarComponent } from './components/experiencia-laboral/experiencia-laboraleditar.component';
 import { SkillscrearComponent } from './components/skills/skillscrear.component';
+import { ProyectoscrearComponent } from './components/proyectos/proyectoscrear.component';
+import { ProyectoseditarComponent } from './components/proyectos/proyectoseditar.component';
+import { AuthInterceptor } from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { SkillscrearComponent } from './components/skills/skillscrear.component'
     SobreMieditarComponent,
     ExperienciaLaboralcrearComponent,
     ExperienciaLaboraleditarComponent,
-    SkillscrearComponent
+    SkillscrearComponent,
+    ProyectoscrearComponent,
+    ProyectoseditarComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,9 @@ import { SkillscrearComponent } from './components/skills/skillscrear.component'
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

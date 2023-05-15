@@ -4,11 +4,12 @@
             <label for="empresa" class="form-label">Empresa</label>
             <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="experiencia.empresa" required>
             <label for="descripcion" class="form-label">Descripcion</label>
-            <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="experiencia.descripcion" required>
+            <textarea type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="experiencia.descripcion" required rows="5"></textarea>
             <label for="fechaInicio" class="form-label">Fecha Inicio</label>
             <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" [(ngModel)]="experiencia.fechaInicio" required>
             <label for="fechaFin" class="form-label">Fecha Fin</label>
             <input type="date" class="form-control" id="fechaFin" name="fechaFin" [(ngModel)]="experiencia.fechaFin">
+            <br>
             <button class="btn btn-primary" type="submit">Actualizar</button>
         </form>
     </div>

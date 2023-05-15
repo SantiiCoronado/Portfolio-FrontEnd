@@ -20,7 +20,7 @@ export class SkillsComponent implements OnInit {
     });
   }
 
-  delete(id:number):void{
+  delete(id?:number):void{
     if(id != undefined){
       this.portfolioService.eliminarSkill(id).subscribe(data=>{
       }, err=>{

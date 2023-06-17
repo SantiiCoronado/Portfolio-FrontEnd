@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "portfolio-frontend-santi"
-  }
+    "default": "portfolio-frontend-santi-cbdce",
+    "portfolio-frontend": "portfolio-frontend-santi-cbdce"
+  },
+  "targets": {},
+  "etags": {}
 }
